@@ -39,7 +39,7 @@ git add README.md
 git commit -m "first commit"
 git branch -M main(생략)
 git remote add origin https://github.com/kaso5552/TIL.git
-git push -u origin main
+git push -u origin master
 ```
 
 ### 기본적인 명령어
@@ -59,4 +59,4 @@ git push -u origin main
 
 #### 느낀점
 
-	- sw로써 첫시작을 한 것 같다. 아직 github에 익숙해 지려면 연습을 많이해야겠다. 우선은 평일만이라도 잔디를 꽉꽉 채워보자
+	- sw개발자로써 첫시작을 한 것 같다. 아직 github에 익숙해 지려면 연습을 많이해야겠다. 우선은 평일만이라도 잔디를 꽉꽉 채워보자
