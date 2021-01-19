@@ -41,7 +41,13 @@
 
 ### math
 
-​	- `isclose(a, b)` a와 b가 근접하면 `True` 아니면 `Fales`를 반환한다
+	-  `isclose(a, b)` a와 b가 근접하면 `True` 아니면 `Fales`를 반환한다
 
+### requests
 
+	- `get(주소값)` 해당 주소값의 응답코드를 받는다  
+
+### pprint
+
+	- `pprint`  정렬된 print가 가능하다. 주로 많은 양의 정보를 정렬해서 출력할때 사용한다.
 

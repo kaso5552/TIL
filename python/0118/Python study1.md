@@ -31,7 +31,7 @@
 
    `수정 불가능(immutable)`이다
 
-	- `string` '' 를 통해서 생성, `수정 불가능(immutable)`이다
+- `string` '' 를 통해서 생성, `수정 불가능(immutable)`이다
 
 #### 2-2 비 시퀀스형
 
