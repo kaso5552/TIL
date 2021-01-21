@@ -27,6 +27,9 @@ print(test)
 
 #TypeError: unsupported operand type(s) for +: 'float' and 'str'(타입이 잘못되었을경우)
 test = 3.5 + 'a'
+
+#ValueError: too many values to unpack (expected 2) (변수의 갯수보다 value의 갯수가 많을때)
+count, result = 1, 0, 0
 ```
 
 

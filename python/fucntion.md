@@ -4,6 +4,25 @@
 
  - 파이썬 내부에 저장되어있어 `함수명`으로 사용가능하다
    	- print()
+- `dir(__bulitin__)` 파이썬 내장함수(builtin _in_)를 확인할 수 있다
+    - [파이썬 내장함수](https://docs.python.org/ko/3/library/functions.html)
+- `abs()` 절대값 함수
+
+```python
+print(abs(-5))
+#출력
+5
+```
+
+	- `divmod(a, b)` a 값을 b값으로 나눈 몫과 나머지를 출력한다
+
+```python
+quotient, remainder = divmod(number, 10) 
+# number를 10으로 나눈 몫이 quotient, 나머지가 remainder에 저장된다
+```
+
+	- `chr()` 숫자를 아스키 코드값의 문자로 변환
+	- `ord()` 아스키 코드값의 문자를 숫자로 변환
 
 ### Sequence형에서 자주사용하는 함수
 
@@ -28,7 +47,7 @@
 
 ### keyword
 
-	- `kwlist`  keyword함수의 리스트를 출력한다
+- `kwlist`  keyword함수의 리스트를 출력한다
 
 ### sys
 
@@ -41,7 +60,7 @@
 
 ### math
 
-	-  `isclose(a, b)` a와 b가 근접하면 `True` 아니면 `Fales`를 반환한다
+- `isclose(a, b)` a와 b가 근접하면 `True` 아니면 `Fales`를 반환한다
 
 ### requests
 
