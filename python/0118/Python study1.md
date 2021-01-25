@@ -7,12 +7,16 @@
 #### 1-1식별자
 
  - 식별자는 변수, 함수 등 식별하데 사용하는 이름이다.
-
  - 사용불가 키워드
 
-   ```False, None, True, and, as, assert, async, await, break, class, continue, def, del, elif, else, except, finally, for, from, global, if, import, in, is, lambda, nonlocal, not, or, pass, raise, return, try, while, with, yield```
+```python
+import keyword
+print(keyword.kwilst)
+```
 
-   
+```False, None, True, and, as, assert, async, await, break, class, continue, def, del, elif, else, except, finally, for, from, global, if, import, in, is, lambda, nonlocal, not, or, pass, raise, return, try, while, with, yield```
+
+
 
 ### 2.컨테이너
 

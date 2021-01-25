@@ -21,12 +21,12 @@ quotient, remainder = divmod(number, 10)
 # number를 10으로 나눈 몫이 quotient, 나머지가 remainder에 저장된다
 ```
 
-	- `chr()` 숫자를 아스키 코드값의 문자로 변환
-	- `ord()` 아스키 코드값의 문자를 숫자로 변환
+- `chr()` 숫자를 아스키 코드값의 문자로 변환
+- `ord()` 아스키 코드값의 문자를 숫자로 변환
 
 ### Sequence형에서 자주사용하는 함수
 
-- ``.count(x)` x의 개수를 나타낸다. 
+- `.count(x)` x의 개수를 나타낸다. 
 - `list.append(X)` list에 x값을 추가한다
 
 ### non-Sequence형에서 자주사용하는 함수
@@ -34,7 +34,7 @@ quotient, remainder = divmod(number, 10)
 #### dictionary
 
 	- `.keys()`  key값을 확인할 수 있다
-	-  `.values()`  value값을 확인할 수 있다 
+	- `.values()`  value값을 확인할 수 있다
 	- `.items() `  key, value값을 모두 확인할 수 있다
 	- `.get('key')` key값에 저장된 valuer값을 확인 할 수 있다.
 
