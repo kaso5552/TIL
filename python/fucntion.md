@@ -14,7 +14,7 @@ print(abs(-5))
 5
 ```
 
-	- `divmod(a, b)` a 값을 b값으로 나눈 몫과 나머지를 출력한다
+- `divmod(a, b)` a 값을 b값으로 나눈 몫과 나머지를 출력한다
 
 ```python
 quotient, remainder = divmod(number, 10) 
@@ -23,20 +23,6 @@ quotient, remainder = divmod(number, 10)
 
 - `chr()` 숫자를 아스키 코드값의 문자로 변환
 - `ord()` 아스키 코드값의 문자를 숫자로 변환
-
-### Sequence형에서 자주사용하는 함수
-
-- `.count(x)` x의 개수를 나타낸다. 
-- `list.append(X)` list에 x값을 추가한다
-
-### non-Sequence형에서 자주사용하는 함수
-
-#### dictionary
-
-	- `.keys()`  key값을 확인할 수 있다
-	- `.values()`  value값을 확인할 수 있다
-	- `.items() `  key, value값을 모두 확인할 수 있다
-	- `.get('key')` key값에 저장된 valuer값을 확인 할 수 있다.
 
 ## 2. 외부함수
 
@@ -53,8 +39,8 @@ quotient, remainder = divmod(number, 10)
 
 ### sys
 
-	- `maxsize`  일반 정수의 최대값 2**63 -1의 값을 나타낸다
-	- `float_info.epsilon` 반올림 오차의 상한값을 나타낸다
+- `maxsize`  일반 정수의 최대값 2**63 -1의 값을 나타낸다
+- `float_info.epsilon` 반올림 오차의 상한값을 나타낸다
 
 ### datetime
 
@@ -66,9 +52,9 @@ quotient, remainder = divmod(number, 10)
 
 ### requests
 
-	- `get(주소값)` 해당 주소값의 응답코드를 받는다  
+- `get(주소값)` 해당 주소값의 응답코드를 받는다  
 
 ### pprint
 
-	- `pprint`  정렬된 print가 가능하다. 주로 많은 양의 정보를 정렬해서 출력할때 사용한다.
+- `pprint`  정렬된 print가 가능하다. 주로 많은 양의 정보를 정렬해서 출력할때 사용한다.
 
