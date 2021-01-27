@@ -120,7 +120,7 @@ mutable(변경 가능), iterable(하나씩 반환가능), unordered(순서 없�
 > [Dict method document](https://docs.python.org/ko/3/library/stdtypes.html#mapping-types-dict)
 
 - `.get(key[, default])` key값에 해당하는 value반환, default값 설정가능(기본은 None)
-- `pop(key[, default])` key값을 삭제하고 해당하는 value반환, default 미설정시 key값이 존재하지않으면 KeyError발생
+- `.pop(key[, default])` key값을 삭제하고 해당하는 value반환, default 미설정시 key값이 존재하지않으면 KeyError발생
 - `.update()` key : value 덮어쓰기 및 추가
 
 ```python
