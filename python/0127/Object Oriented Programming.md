@@ -142,12 +142,12 @@ class Archer: # 부모 클래스
         self.name = name
         #...
 
-class Shrine(Archer): # 자식 클래스
+class BowMaster(Archer): # 자식 클래스
     
     def __init__(self, name, level):
         super().__init__(name) # super()를 통해서 부모 class 내용 사용가능
     #...
 
-the_god = Shrine
+the_god = BowMaster()
 ```
 
