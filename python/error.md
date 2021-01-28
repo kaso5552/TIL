@@ -25,11 +25,39 @@ print('안녕하세요'
 # NameError: name 'test' is not defined (test라는 정의된 변수를 호출했기 때문에 발생)
 print(test)
 
-#TypeError: unsupported operand type(s) for +: 'float' and 'str'(타입이 잘못되었을경우)
-test = 3.5 + 'a'
-
 #ValueError: too many values to unpack (expected 2) (변수의 갯수보다 value의 갯수가 많을때)
 count, result = 1, 0, 0
+```
+
+### UnboundLocalError
+
+- : local variable 'num' referenced before assignment (지역변수 'num'을 할당 전에 참조해라)
+
+```python
+num = 5
+
+def test():
+    # (global num) 을 통해서 오류 해결
+	num += 1 => test()
+	print(num)
+
+test() # 오류 발생 
+```
+
+### TypeError 
+
+- unsupported operand type(s) for +: 'float' and 'str'(타입이 잘못되었을경우)
+
+```python
+test = 3.5 + 'a'
+```
+
+- get_test() takes 0 positional arguments but 1 was given(get_test()는 인자가 없는데 1개가 들어갔다)
+
+```python
+class Test:  
+    def get_test(): # get_test(self)를 통해서 문제를 해결할 수 있다.
+        print('오류 발생')
 ```
 
 

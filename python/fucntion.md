@@ -31,7 +31,7 @@ quotient, remainder = divmod(number, 10)
  - `함수명.함수`를 통해서 사용가능하다
    	- ex ) `math.isclose`
  - `from 함수명 import 함수`를 통해서 함수명 없이 사용가능하다.(내부함수처럼 사용가능)
-   	- ex) `form math import isclose` -> `isclose`
+   	- ex) `form math import isclose` -> `isclose갯수를 영어로초ㅑㅐ`
 
 ### keyword
 
@@ -57,4 +57,15 @@ quotient, remainder = divmod(number, 10)
 ### pprint
 
 - `pprint`  정렬된 print가 가능하다. 주로 많은 양의 정보를 정렬해서 출력할때 사용한다.
+
+### random
+
+- `.sample(x, number)` x에서 중복없이 number만큼 반환
+- `.choice(x)` x에서 랜덤값 반환
+- `.choice(x, k=number)` x에서 number길이만큼의 리스트 값 반환
+
+```python
+a = [1,2,3,4,5]
+choice(a, k=2) # 출력 [3,1] ..
+```
 
