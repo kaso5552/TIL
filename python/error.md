@@ -60,6 +60,32 @@ class Test:
         print('오류 발생')
 ```
 
+### ValueError
+
+- Sample larger than population or is negative
+
+```
+from random import sample,choices
+class ClassHelper:
+    
+    def __init__(self, name_list):
+        self.name_list = name_list
+        
+    def pick(self, number):
+        return sample(self.name_list, number)
+    
+    def match_pair(self):
+        result = []
+        sample_name_list = self.name_list
+        while len(sample_name_list) > 3:
+            sample_name = sample(sample_name_list, 2)
+            result.append(sample_name)
+            for name in sample_name:
+                sample_name_list.remove(name)
+        result.append(sample_name_list)
+        return result
+```
+
 
 
 ## Exception Handling (예외 처리)
