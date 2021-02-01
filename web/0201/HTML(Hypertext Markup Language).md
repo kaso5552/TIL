@@ -10,11 +10,15 @@
 
 여는 태그, 닫는 태그, 내용으로 구성되어 있다.
 
+[요소 참고서](https://developer.mozilla.org/ko/docs/Web/HTML/Element)
+
 ```html
 <p> <!-- opening tag -->
    	test <!-- content -->
 </p> <!-- closing tag -->
 ```
+
+- <!-- 주석 --> 으로 주석을 표현할 수 있다.
 
 ### Attributes(속성)
 
@@ -49,3 +53,4 @@ vscode에서 `!` + `enter`를 통해서 기본구조를 불러올 수 있다.
 </html>
 ```
 
+> HTML은 공식문서를 자주 활용하자. 검색창에 "mdn 요소"를 통해서 공식홈페이지 확인 !
