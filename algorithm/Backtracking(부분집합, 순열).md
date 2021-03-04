@@ -9,9 +9,6 @@
 
 ```python
 # {2, 5, 7} 부분집합
-arr = [2, 5, 7]
-N = len(arr)
-A = [0] * N # 원소의 포함 여부를 저장
 
 def powerset(n, k): # n : 원소의 갯수, k = 현재 depth
     if n == k:
@@ -26,7 +23,9 @@ def powerset(n, k): # n : 원소의 갯수, k = 현재 depth
         A[k] = 0
         powerset(n, k + 1)
 
-
+arr = [2, 5, 7]
+N = len(arr)
+A = [0] * N # 원소의 포함 여부를 저장
 powerset(N, 0)
 ```
 
@@ -43,4 +42,39 @@ powerset(N, 0)
 ```
 
 
+
+### 순열(nPn)
+
+```python
+# {2, 5, 7} nPn
+
+def perm(n, k): # n : 원소의 갯수, k : 현재 뎁스
+    if n == k:
+        print(t)
+    else:
+        for i in range(n):
+            if visited[i]:continue # 이미 방문했다면 continue
+
+            t[k] = arr[i]
+            visited[i] = 1
+            perm(n, k+1) # 한단계 깊이 탐색
+            visited[i] = 0
+
+arr = [2,5,7]
+N = len(arr)
+t = [0] * N # 원소의 순서를 저장
+visited = [0] * N
+perm(N, 0)
+```
+
+- 출력
+
+```
+[2, 5, 7]
+[2, 7, 5]
+[5, 2, 7]
+[5, 7, 2]
+[7, 2, 5]
+[7, 5, 2]
+```
 
