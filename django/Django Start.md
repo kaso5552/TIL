@@ -19,7 +19,7 @@
 
 ### django project 만들기
 
-1. `django-admin startproject 프로젝트 명` 
+1. `django-admin startproject 프로젝트 명`  or `python -m django startproject 프로젝트 명`
 2. `cd 프로젝트 명` (해당 폴더로 이동, `manage.py`와 동일한 위치)
 
 
