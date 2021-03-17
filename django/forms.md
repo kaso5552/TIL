@@ -2,6 +2,8 @@
 
 [forms field](https://docs.djangoproject.com/en/3.1/ref/forms/fields/) [form](https://docs.djangoproject.com/en/3.1/topics/forms/)
 
+- django 프로젝트의 주요 유효성 검사 도구
+- 공격 및 데이터 손상에 대한 `중요한` 방어수단
 - 폼을 사용하면 양식 처리를 간단하게 할 수 있다
 
 #### 순서
