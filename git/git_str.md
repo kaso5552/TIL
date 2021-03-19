@@ -67,7 +67,8 @@ git push -u origin master
 
 - `git commit` 취소하기
   - git commit --amend
-    - 수정상태에서 수정
+    - 입력모드(i), 이동모드(esc)
+    - 입력모드에서 수정하기
     - 이후에 `:wq`로 나가기
 
 
