@@ -57,6 +57,21 @@ git push -u origin master
 * `shift insert`  : 복사한 파일 붙여넣기
 * `git remote -v` : remote 정보를 확인한다
 
+
+
+### git reset
+
+- `git status` 를 통해서 정보를 알 수 있다
+- `git add` 취소하기
+  - `git restore --staged <file>`
+
+- `git commit` 취소하기
+  - git commit --amend
+    - 수정상태에서 수정
+    - 이후에 `:wq`로 나가기
+
+
+
 #### 느낀점
 
 	- sw개발자로써 첫시작을 한 것 같다. 아직 github에 익숙해 지려면 연습을 많이해야겠다. 우선은 평일만이라도 잔디를 꽉꽉 채워보자
