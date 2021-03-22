@@ -81,9 +81,28 @@ def delete(request):
     return redirect('articles:index')
 ```
 
+- `request.user.delete()` request에 담겨온 user정보를 삭제한다
 
 
 
+#### 회원정보수정(Update)
+
+##### forms.py
+
+```python
+from django.contrib.auth.forms import UserChangeForm
+from django.contrib.auth import get_user_model
+
+class CustomUserChanceForm(UserChangeForm):
+
+    class Meta:
+        model = get_user_model()
+        fields = ('email', 'first_name', 'last_name', )
+```
+
+- 그냥 `UserChanceForm` 을 사용하게 되면 슈퍼계정까지 수정할 수 있기때문에 금기한다
+- 따라서 `CustomUserChanceForm` 을 새로 만들어서 사용한다
+- `get_user_model` 기본 유저 모델을 알 수 있다.
 
 
 
