@@ -69,6 +69,49 @@ def signup(request):
 
 
 
+#### 로그인(Login)
+
+##### login함수
+
+```python
+from django.contrib.auth.forms import AuthenticationForm
+
+def login(request):
+    if request.user.is_authenticated:
+        return redirect('articles:index')
+    if request.method == "POST":
+        form = AuthenticationForm(request, request.POST)
+        if form.is_valid():
+            auth_login(request, form.get_user())
+            return redirect('articles:index')
+    else:
+        form = AuthenticationForm()
+    context = {
+        'form' : form,
+    }
+    return render(request, 'accounts/login.html', context)
+```
+
+- `AuthenticationForm` 을 활용해서 정보를 받아와서 
+- `auth_login(request, form.get_user())` 를 통해서 로그인한다.
+
+##### login.html
+
+```django
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>로그인</h1>
+<form action="" method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit">
+</form>
+{% endblock %}
+```
+
+
+
 #### 회원탈퇴(Delete)
 
 ##### delete함수
@@ -103,6 +146,52 @@ class CustomUserChanceForm(UserChangeForm):
 - 그냥 `UserChanceForm` 을 사용하게 되면 슈퍼계정까지 수정할 수 있기때문에 금기한다
 - 따라서 `CustomUserChanceForm` 을 새로 만들어서 사용한다
 - `get_user_model` 기본 유저 모델을 알 수 있다.
+
+##### update 함수
+
+```python
+@login_required
+def update(request):
+    if request.method == 'POST':
+        form = CustomUserChanceForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+            return redirect('articles:index')
+    else:
+        form = CustomUserChanceForm(instance=request.user)
+    context = {
+        'form' : form,
+    }
+    return render(request, 'accounts/update.html', context)
+```
+
+### 비밀번호수정(password)
+
+##### changepw 함수
+
+```python
+@require_http_methods(['GET', 'POST'])
+def changepw(request):
+    if not request.user.is_authenticated:
+        return redirect('acoounts:login')
+    
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            form.save()
+            update_session_auth_hash(request, form.user)
+            return redirect('accounts:index')
+    else:
+        form = PasswordChangeForm(request.user)
+    context = {
+        'form' : form,
+    }
+    return render(request, 'accounts/changepw.html', context)
+```
+
+- django에서 제공하는 `PasswordChangeForm`을 사용한다.
+- 동작은 update와 크게 다르지 않지만 비밀번호 변경후 저장하게 되면 로그아웃이 되어버린다
+- 따라서 `update_session_auth_hash(request, form.user)` 를 통해서 session정보를 업데이트해서 로그아웃이 풀리는 것을 막아준다.
 
 
 
