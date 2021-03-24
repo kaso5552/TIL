@@ -48,3 +48,27 @@ class Comment(models.Model):
 3. urls - > views 형식으로진행
 4. 필요하면 form만들기
 
+
+
+## user model
+
+항상 첫 마이그레이션 전에 설정하기
+
+1. 유저 모델 정의
+
+```python
+from django.db import models
+from django.contrib.auth.models import AbstractUser
+
+class User(AbstractUser):
+    pass
+```
+
+2. settings.py에 AUTH_USER_MODEL 등록하기
+3. makemigrations, migrate 해서 사용하기
+
+
+
+- models 에서는` AUTH_USER_MODEL`을 통해서 사용하기
+- 다른 곳에서는 `get_user_model`로 사용하기 
+
