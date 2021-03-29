@@ -4,6 +4,7 @@
 
 - `UserCreationForm`(회원가입)
 - `AuthenticationForm`(로그인)
+- `UserChangeForm`(회원정보수정)
 
 ## accounts
 
