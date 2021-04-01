@@ -20,6 +20,18 @@ class Comment(models.Model):
 
 
 
+#### ManyToManyField
+
+```python
+class Comment(models.Model):
+    articles = models.ManyToManyField(Article, related_name='comments')
+```
+
+- related_name : 역참조시 이름설정
+- through : 중간 테이블을 직접 지정하려면 through 옵션을 사용하여 중개 테이블을 나타내는 Django 모델을 지정
+
+
+
 #### 1:N model
 
 - Comment(N) 이 Aritcle(1)을 참조
