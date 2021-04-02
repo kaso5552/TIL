@@ -1,30 +1,30 @@
-git branch feature/singup
+# git branch
 
-git switch feature/signup
+가지를 통해서 본인이 수정한 부분을 정확히 알 수 있고 협업시에 한곳으로 합칠 수 있다.
 
-그다음 수정
+- 가지 만들기 : `git branch feature/singup`
+- 가지로 이동하기 : `git switch feature/signup`
+- 파일 수정후 커밋 
 
-그다음 깃 커밋
+- 커밋 이후에
+  - 하나로 합치는 과정을 어떻게 할건지 결정 ( 웹 or 로컬)\
+  - 마스터로 돌아와서 : `git switch master`
+  - 가지를 합치고 : `git merge feature/signup`
+- push 하기
+
+- 다른사람이 pull을 한 이후 :  `git pull origin master`
+  - 문제 발생, 가지랑 마스터랑 충돌이 일어남( 선택해야함 3가지 조건 중에 합칠지 없앨지 원래있던대로 남길지)
+- `git merge`를 통해서 합치기
+- 반복
 
 
 
-하나로 합치는 과정을 어떻게 할건지 결정 ( 웹 or 로컬)
+#### 연속 커밋
 
-git switch master
-
-git merge feature/signup( 마스터랑 가지랑 합치기 )
-
-git push origin master ( 올리기 )
-
-
-
-그다음 b 는 마스터상태에서 땡기기
-
-git pull origin master
-
-- 문제 발생, 가지랑 마스터랑 충돌이 일어남( 선택해야함 3가지 조건 중에 합칠지 없앨지 원래있더넉 남길지)
-
-그다음 git merge를 통해서 합치기
-
-브렌치(dec) - 만들고 커밋남기기 그다음 - 또 브렌치(a) - 깃 커밋 - dec으로 돌아가기 그다음  git merge featur/a
+1. 브렌치(dec) 만들기
+2. 커밋남기기
+3. 또 브렌치(a) 만들기
+4. 커밋 남기기
+5. 처음 가지(dec)로 돌아가기
+6. `git merge` 로 합치기
 
