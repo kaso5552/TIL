@@ -28,3 +28,11 @@
 5. 처음 가지(dec)로 돌아가기
 6. `git merge` 로 합치기
 
+
+
+1. 서로 branch에서 작업하기  
+   - git branch 이름
+   - git switch 이름 
+2. 작업후 push 하기 (다른사람이 merge확인하기) -> 합치기  
+   - 본인이 push하기전에 다른사람이 push 했을경우
+   - git switch master로 이동 -> git pull origin master (최신상태 유지) -> 다시 브렌치로 이동해서 push 하기
