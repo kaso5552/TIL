@@ -50,3 +50,25 @@
 
     
 
+- 2개의 다른 app에서 model참조
+
+  - models.py에서 참조
+
+    ```python
+    from app1.models import App1Model
+    
+    class App2Model(models.Model):
+    	app1 = models.ForeignKey('app1.App1Model', ...)
+    ```
+
+    
+
+  - views.py에서 참조
+
+    ```python
+    from django.apps import apps
+    
+    App1 = apps.get_model('app1', 'App1Model')
+    ```
+
+    
