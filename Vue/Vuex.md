@@ -31,3 +31,34 @@
     - state를 기준으로 계싼
   - ![image-20210512130932621](Vuex.assets/image-20210512130932621.png)
 
+- 순서
+
+  1. components에서 dispatch로 함수호출 -> actions
+
+     ```javascript
+     // ex
+     createTodo: function () {
+         this.$store.dispatch('createTodo', this.todo)
+     }
+     ```
+
+  2. actions 에서 commit 하기 -> mutations
+
+     ```javascript
+     // ex
+     createTodo: function ({commit}, todoItem) {
+         commit('CREATE_TODO', todoItem)
+     }
+     ```
+
+  3. mutations에서 push하기 -> state
+
+     ```javascript
+     // ex
+     CREATE_TODO: function (state, todoItem) {
+         state.todos.push(todoItem)
+     }
+     ```
+
+  4. state의 변수확인
+
